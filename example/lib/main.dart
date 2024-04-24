@@ -1,10 +1,14 @@
+import 'package:bee_x/conts/global.dart';
+import 'package:bee_x/conts/padding.dart';
+import 'package:bee_x/conts/radius.dart';
+import 'package:bee_x/exts/dyn.dart';
+import 'package:bee_x/views/text/text.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
-import 'package:bee_x/bee_x.dart';
 
 void main() {
+  padding = 12;
+  radius = 12;
+
   runApp(const MyApp());
 }
 
@@ -29,7 +33,10 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: '),
+          child: CText(
+            1000000.toCurrency(),
+            fontSize: 100,
+          ),
         ),
       ),
     );
